@@ -1,0 +1,22 @@
+@charset "UTF-8"
+
+@mixin size($height, $width)
+  height: $height
+  width: $width
+
+@mixin bg-img()
+  background-size: cover
+  background-position: center
+
+@mixin flex()
+  display: flex
+  align-items: center
+  justify-content: center
+
+@mixin flip()
+  -moz-transform: scaleX(-1)
+  -o-transform: scaleX(-1)
+  -webkit-transform: scaleX(-1)
+  transform: scaleX(-1)
+  filter: FlipH
+  -ms-filter: "FlipH"

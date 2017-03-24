@@ -1,0 +1,212 @@
+.menu
+  +clearfix
+  z-index: 100
+  color: black
+  background: white
+  width: 100%
+  position: relative
+  box-sizing: border-box
+  +PHONE_ONLY
+    background: black
+    min-height: 70px
+    opacity: 0.8
+
+  &__top
+    width: 100%
+    +clearfix
+    text-align: right
+
+  &__logo
+    display: block
+    width: 150px
+    float: left
+    z-index: 6
+    position: absolute
+    top: 10px
+    left: 50%
+    transform: translateX(-50%)
+    +flex
+    +PHONE_ONLY
+      width: 100px
+      left: 0
+      transform: translateX(0)
+      position: relative
+
+  &__share
+    width: 100%
+    float: right
+    height: 80px
+    +PHONE_ONLY
+      text-align: center
+      height: auto
+
+  &__shareBox
+    padding: 15px 0
+    float: right
+    +PHONE_ONLY
+      float: none
+      display: inline-block
+
+  &__shareInput
+    float: left
+    margin: 0 10px
+    width: 250px
+    opacity: 0.6
+    font-size: 12px
+    padding: 2px
+
+  &__btn
+    border: none
+    cursor: pointer
+
+  &__nav
+    position: relative
+    +PHONE_ONLY
+      display: none
+      background: black
+      +clearfix
+      font-size: 16px
+      width: 100%
+      z-index: 5
+
+  &__navBot
+    +clearfix
+    padding-right: 35px
+    position: relative
+    text-align: center
+    display: flex
+    justify-content: center
+    +PHONE_ONLY
+      float: none
+      +clearfix
+      display: block
+      padding: 0
+
+  &__navItem
+    display: inline-block
+    float: left
+    font-size: 14px
+    padding: 10px 15px
+    border-bottom: 4px solid transparent
+    position: relative
+    box-sizing: border-box
+    +PHONE_ONLY
+      font-size: 18px
+      width: 100%
+      padding: 10px 0
+      color: white
+
+    &:hover
+      background: $gray
+      color: white
+
+  &__subMenu
+    display: none
+    position: absolute
+    top: 45px
+    left: 0
+    color: white
+    width: 300px
+    z-index: 10
+    +clearfix
+    +PHONE_ONLY
+      width: 100%
+      text-align: center
+      position: relative
+      top: 0
+
+  &__again
+    width: 100%
+    box-sizing: border-box
+    background: $gray
+    display: none
+
+  &__level
+    width: 100%
+    box-sizing: border-box
+    background: $gray
+    display: none
+
+  &__level2
+    width: 100%
+    box-sizing: border-box
+    background: $gray
+    display: none
+
+  &__sub
+    background: $gray
+    display: block
+    width: 100%
+    text-align: left
+    box-sizing: border-box
+    +clearfix
+    +PHONE_ONLY
+      text-align: center
+
+    &:hover
+      background: $blue
+
+  &__sub2
+    background: $gray
+    display: block
+    width: 100%
+    text-align: left
+    box-sizing: border-box
+    +clearfix
+    +PHONE_ONLY
+        text-align: center
+
+    &:hover
+      background: $blue
+
+  &__name
+    box-sizing: border-box
+    width: 100%
+    text-align: left
+    display: block
+    +PHONE_ONLY
+      text-align: center
+
+  &__subName
+    padding: 5px 10px
+
+    &.-more
+      padding: 5px 10px 5px 25px
+      color: lightgray
+
+      &:hover
+        color: white
+
+    &.-more2
+      padding: 5px 10px 5px 45px
+      color: gray
+
+      &:hover
+        color: white
+
+  &__link
+    display: inline-block
+    width: 80%
+
+  &__plus
+    display: inline-block
+    float: right
+
+    &.-main
+      display: none
+      +PHONE_ONLY
+        display: inline-block
+
+  &__bars
+    position: absolute
+    top: 0
+    right: 0
+    color: white
+    font-size: 44px
+    padding: 0 10px
+    display: none
+    cursor: pointer
+    z-index: 6
+    +PHONE_ONLY
+      position: relative
+      float: right

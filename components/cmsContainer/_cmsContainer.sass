@@ -1,0 +1,359 @@
+.cmsContainer
+  padding: 0 15px
+  width: 100%
+
+  .textBox &
+    padding: 15px 15px
+    +MAX(767px)
+      padding: 20px 15px
+
+    &:not(:empty)
+      margin-bottom: 45px
+      +MAX(969px)
+        margin-bottom: 30px
+      +MAX(767px)
+        margin-bottom: 15px
+
+  // STYLE OGÓLNE
+  blockquote
+    quotes: "“" "„"
+    font-size: 24px
+    padding: 30px 60px
+    margin: 30px 0
+    display: block
+    position: relative
+    text-align: center
+    @media (max-width: 1023px)
+      padding: 25px 50px
+      font-size: 18px
+    @media (max-width: 650px)
+      padding: 20px 40px
+      font-size: 17px
+
+    &:before
+      content: open-quote
+      color: #b0dbe4
+      font-size: 150px
+      position: absolute
+      left: 0
+      top: 0
+      line-height: 120px
+      font-weight: bold
+      @media (max-width: 1023px)
+        font-size: 100px
+        line-height: 90px
+        font-weight: normal
+      @media (max-width: 650px)
+        font-size: 80px
+        line-height: 70px
+
+    &:after
+      content: close-quote
+      color: #b0dbe4
+      font-size: 150px
+      position: absolute
+      line-height: 65px
+      right: 0
+      bottom: 50px
+      font-weight: bold
+      @media (max-width: 1023px)
+        font-size: 100px
+        line-height: 20px
+        font-weight: normal
+      @media (max-width: 650px)
+        font-size: 80px
+        line-height: 0
+
+  img
+    margin-bottom: 30px
+    max-width: 100%
+    display: block
+    height: auto
+
+  h1
+    font-size: 24px
+    font-weight: 300
+    margin-bottom: 24px
+    line-height: 1.2
+    +MAX(970px)
+      margin-bottom: 20px
+      padding: 0
+      text-align: center
+
+  h2
+    font-weight: 600
+    font-size: 20px
+    margin-bottom: 25px
+    +MAX(969px)
+      margin-bottom: 20px
+
+  h3
+    font-size: 48px
+    font-weight: 300
+    text-align: center
+    margin-bottom: 40px
+    line-height: 1.1
+    +PHONE_ONLY
+      font-size: 36px
+
+  h4
+    font-size: 24px
+    font-weight: 300
+    line-height: 1.1
+    text-align: center
+
+  p
+    font-weight: 300
+
+    margin-bottom: 25px
+    +MAX(969px)
+      margin-bottom: 20px
+
+    &:last-of-type
+      margin-bottom: 0
+
+  em
+    font-style: italic
+
+  ol
+    list-style-type: decimal
+    padding-left: 15px
+    > li
+      margin: 0 0 5px
+      position: relative
+      padding-left: 5px
+      & > ol
+        margin-top: 5px
+
+
+  ul
+    margin-bottom: 25px
+    list-style: none
+
+    &.icon-list
+      list-style: none
+      +MAX(969px)
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+
+      li
+        line-height: 1.5
+        font-weight: 300
+        font-size: 16px
+        padding: 0 0 0 95px
+        min-height: 55px
+        margin-bottom: 25px
+        +MAX(969px)
+          width: 33.33%
+          padding: 0 15px
+          text-align: center
+        +MAX(767px)
+          width: 100%
+          padding: 0 0 0 70px
+          text-align: left
+        +MAX(480px)
+          padding: 0 0 0 65px
+
+        &:after
+          display: none
+          content: ''
+
+    &.-double
+      display: flex
+      justify-content: flex-start
+      align-items: center
+      flex-wrap: wrap
+      padding: 0
+
+      li
+        position: relative
+        display: flex
+        align-items: flex-start
+        width: 50%
+        padding-left: 77px
+        padding-right: 15px
+        padding-bottom: 20px
+        text-align: left
+        +PHONE_ONLY
+          width: 100%
+          max-width: 480px
+          margin: 0 auto
+
+        &:after
+          position: absolute
+          top: 0
+          left: 16px
+          content: ' '
+          display: block
+          width: 30px
+          height: 20px
+
+    &:not([class])
+      padding-left: 15px
+
+    > li
+      margin: 0 0 5px
+      position: relative
+
+      & > ul
+        margin-top: 10px
+
+  img.icon
+    display: block
+    margin: 0 auto
+    max-width: 55px
+    max-height: 42px
+
+    +MAX(767px)
+      max-height: 36px
+    +MAX(480px)
+      max-height: 30px
+
+  .iconBox
+    display: inline-block
+    width: 70px
+    height: 42px
+
+    position: absolute
+    left: 0
+    top: 5px
+
+    text-align: center
+
+    +MAX(969px)
+      position: relative
+      display: block
+      width: 100%
+      margin: 0 auto 15px
+
+    +MAX(767px)
+      position: absolute
+      display: inline-block
+      width: 55px
+      height: 42px
+
+  img.mainphoto
+    max-width: 100%
+    margin: 0 0 10px 0
+    float: left
+
+  iframe.video
+    width: 100%
+    max-width: 850px
+    height: 480px
+    margin-bottom: 25px
+    +MAX(969px)
+      width: 100%
+      margin-bottom: 20px
+
+  table
+    width: 100%
+    overflow: auto
+    display: block
+
+    tbody
+      display: block
+
+      tr
+        display: flex
+        flex-wrap: wrap
+
+        &:nth-child(even)
+          background-color: #ededed
+
+      th
+        padding: 5px 10px
+        +MAX(969px)
+          padding: 2px 5px
+
+      td
+        padding: 5px 0
+        width: 74.99%
+        +MAX(969px)
+          padding: 2px 0
+        +MAX(767px)
+          width: 59.99%
+
+        &:first-child
+          width: 24.99%
+          padding: 5px 5px 5px 15px
+          +MAX(969px)
+            padding: 5px 5px 5px 10px
+          +MAX(767px)
+            width: 39.99%
+
+  &__aboutUs
+    text-align: center
+    font-size: 20px
+    font-weight: 300
+    +MAX(767px)
+      text-align: left
+      font-size: 16px
+      display: flex
+      align-items: center
+      max-width: 480px
+      width: 100%
+      margin: 0 auto 15px
+
+    img
+      display: block
+      margin: 0 auto 25px
+      width: auto
+      height: 40px
+      +MAX(767px)
+        margin: 0 20px
+        width: 40px
+
+
+    p
+      text-align: center
+      font-size: 20px
+      font-weight: 300
+      +MAX(767px)
+        margin: 0
+        text-align: left
+        font-size: 16px
+
+
+  &__aboutUsButton
+    text-align: center
+
+    a
+      display: inline-block
+      margin: 0 auto
+      border: 2px solid $pink
+      border-radius: 30px
+      padding: 12px 30px 12px 80px
+      background-image: url("../components/svgIcon/src/msg.svg")
+      background-position: 25px center
+      background-repeat: no-repeat
+      background-size: 30px auto
+      color: $pink
+      font-size: 16px
+      text-align: left
+      line-height: 1.2
+      transition: color 0.3s ease, border-color 0.3s ease
+
+      &:hover
+        border-color: $gray
+        text-decoration: none
+        color: $gray
+
+  .lead
+    margin-bottom: 20px
+    font-size: 20px
+    font-weight: bold
+    line-height: 1.25
+
+
+.alignright
+  float: right
+  margin: 0 0 10px 25px
+
+.alignleft
+  float: left
+  margin: 0 25px 10px 0
+
+.aligncenter
+  margin: 0 auto 10px

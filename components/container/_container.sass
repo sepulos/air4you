@@ -1,0 +1,19 @@
+// std version mixin
+=container
+  margin: 0 auto
+  padding: 0 30px
+  max-width: 1200px
+  min-width: 320px
+  box-sizing: border-box
+  +MAX(1199px)
+    padding: 0 22px
+  +MAX(969px)
+    padding: 0 30px
+  +MAX(767px)
+    padding: 0 15px
+  +PHONE_ONLY_480
+    overflow-y: hidden
+
+.container
+  +clearfix
+  +container

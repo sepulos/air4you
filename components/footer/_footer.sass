@@ -1,0 +1,56 @@
+.footer
+  background: blue
+  height: auto
+  position: relative
+
+  &__col
+    min-height: 200px
+    width: 25%
+    float: left
+    color: white
+    padding: 10px
+    border-left: 1px solid white
+    position: relative
+    transition: all 1s
+    box-sizing: border-box
+    +PHONE_ONLY
+      width: 50%
+      min-height: 250px
+      margin-bottom: 20px
+    +PHONE_ONLY_600
+      width: 100%
+      border-left: none
+      border-bottom: 1px solid white
+
+
+  &__title
+    font-size: 20px
+    margin: 10px 0
+    transition: all 1s
+    +LAPTOP_MAX
+      font-size: 18px
+    +TAB_MAX
+      font-size: 14px
+    +PHONE_ONLY
+      font-size: 16px
+
+  &__text
+    font-size: 12px
+    opacity: 0.8
+    display: block
+    width: 100%
+    transition: all 1s
+
+    &.-padding
+      padding-top: 20px
+
+  &__adres
+    margin: 15px 0
+
+  &__img
+    float: left
+    margin: 0 10px
+
+    &.-margin
+      margin: 10px
+

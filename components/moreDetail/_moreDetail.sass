@@ -1,0 +1,84 @@
+.moreDetail
+  padding: 15px
+  +clearfix
+  box-sizing: border-box
+
+  &__small
+    width: 50%
+    float: left
+    transition: all 1s
+    box-sizing: border-box
+    padding: 5px
+    +PHONE_ONLY
+      width: 100%
+
+  &__img
+    width: 100%
+    height: auto
+    transition: all 1s
+    box-sizing: border-box
+    border: 1px solid black
+
+  &__box
+    box-sizing: border-box
+    width: 50%
+    padding: 5px
+    float: left
+
+  &__big
+    width: 50%
+    float: right
+    transition: all 1s
+    box-sizing: border-box
+    padding: 5px
+    +PHONE_ONLY
+      width: 100%
+
+  &__about
+    width: 100%
+    float: none
+    display: block
+
+  &__warranty
+    color: $red
+    font-size: 16px
+    padding: 0 20px
+    font-weight: 700
+    margin: 10px 0
+
+  &__icons
+    width: 100%
+    height: 50px
+    padding: 30px 0
+    display: block
+    float: none
+
+  &__icon
+    float: left
+    font-size: 20px
+
+    &.-right
+      float: right
+      font-size: 20px
+      width: 40px
+      height: 40px
+      +flex
+      background: #f7f7f7
+
+  &__pdf
+    float: left
+    width: 100%
+    height: 100%
+
+  &__icona
+    float: right
+    display: inline-block
+    font-size: 40px
+    color: lightgrey
+    margin: 0 5px
+    transition: all 1s
+
+    &:hover
+      color: $red
+
+

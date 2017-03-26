@@ -1,0 +1,56 @@
+.sidebar
+  width: 100%
+  float: left
+  transition: all 1s
+  +PHONE_ONLY
+    transform: translateX(50%)
+  +PHONE_ONLY_600
+    width: 100%
+    transform: translateX(0)
+
+  &__title
+    padding-top: 10px
+    font-size: 30px
+    text-align: center
+
+  &__box
+    border-top: 1px solid black
+    color: black
+    display: none
+
+  &__nav
+    font-size: 14px
+    font-weight: 700
+    cursor: pointer
+    padding: 18px 10px 15px
+    border-top: 1px solid black
+    background: #f9f9f9
+    color: black
+    transition: font-size 1s
+    position: relative
+    text-align: center
+
+
+  &__navList
+    background: #ececec
+    padding: 18px 10px 15px
+    cursor: pointer
+    position: relative
+    font-size: 12px
+    font-weight: 700
+    transition: all 1s
+
+    &:hover
+      background: $blue
+
+  &__plus
+    font-weight: 400
+    font-size: 10px
+    color: $gray
+    position: absolute
+    left: 10px
+    top: 5px
+
+  &__new
+    display: inline-block
+    font-weight: 400

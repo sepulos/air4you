@@ -24,18 +24,7 @@ var gallery = (function () {
   });
 
   var bindEvents = function () {
-    lightBox();
     slickGallery();
-  };
-
-
-  var lightBox = function () {
-    $galleryBox.lightGallery({
-
-      speed: 1500,
-      swipeThreshold: 100
-    })
-
   };
 
   var slickGallery = function () {
@@ -50,8 +39,8 @@ var gallery = (function () {
         autoplay: true,
         arrows: true,
         appendArrows: '.gallery__box',
-        prevArrow: '<div class="gallery__prev">&lt;</div>',
-        nextArrow: '<div class="gallery__next">&gt;</div>',
+        prevArrow: '<div class="gallery__prev"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>',
+        nextArrow: '<div class="gallery__next"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>',
         autoplaySpeed: 2000,
         responsive: [
           {

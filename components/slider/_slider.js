@@ -35,8 +35,8 @@ var slider = (function () {
         dots: true,
         arrows: true,
         appendArrows: '.slider__title',
-        prevArrow: '<div class="slider__prev">&lt;</div>',
-        nextArrow: '<div class="slider__next">&gt;</div>',
+        prevArrow: '<div class="slider__prev"><i class="fa fa-chevron-left" aria-hidden="true"></div>',
+        nextArrow: '<div class="slider__next"><i class="fa fa-chevron-right" aria-hidden="true"></div>',
         dotsClass: 'slider__dots',
         customPaging: function(slider, i) {
           // this example would render "tabs" with titles

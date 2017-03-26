@@ -1,5 +1,6 @@
 .download
-  margin: 10px 0
+  margin: 10px 0 30px
+  +clearfix
 
   &__file
     padding: 5px 5px
@@ -11,13 +12,22 @@
     +PHONE_ONLY
       width: 100%
 
+    &:hover
+      text-decoration: underline
+
+    &.-three
+      width: 33.33%
+
+    &.-two
+      width: 50%
+
   &__title
     font-size: 18px
     margin-bottom: 20px
     font-weight: 700
 
   &__fileText
-    color: $red
+    color: black
     padding-left: 5px
 
   &__fileImg

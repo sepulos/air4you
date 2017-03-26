@@ -28,7 +28,7 @@ var menu = (function () {
       $plus = $menu.find('.menu__plus');
 
       bindEvents();
-      scroll();
+      // scroll();
       menuDisplay();
       subb();
       subbMenu();

@@ -17,7 +17,7 @@
 
   &__title
     width: 100%
-    font-size: 32px
+    font-size: 24px
     padding: 30px 10px
     text-align: left
 
@@ -26,8 +26,20 @@
 
   &__btn
     display: inline-block
-    font-size: 20px
+    font-size: 14px
     padding: 10px 20px
     background: $blue
     color: white
     margin-top: 40px
+    border: 1px solid transparent
+    transition: all 0.8s
+
+    &:hover
+      color: $blue
+      background: white
+      border: 1px solid $blue
+
+  &__welcome
+    font-size: 24px
+    padding: 20px 0 10px
+    text-align: right

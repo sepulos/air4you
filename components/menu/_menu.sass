@@ -4,7 +4,9 @@
   color: black
   background: white
   width: 100%
-  position: relative
+  position: fixed
+  top: 0
+  left: 0
   box-sizing: border-box
   +PHONE_ONLY
     background: black
@@ -18,7 +20,7 @@
 
   &__logo
     display: block
-    width: 150px
+    width: 130px
     float: left
     z-index: 6
     position: absolute
@@ -35,7 +37,7 @@
   &__share
     width: 100%
     float: right
-    height: 80px
+    height: 70px
     +PHONE_ONLY
       text-align: center
       height: auto

@@ -1,17 +1,38 @@
 var side = (function () {
 
-  //catche DOM
-  var $sidebar = $('.sidebar');
-  var $sidebarItem = $sidebar.find('.sidebar__item');
-  var $sidebarBox = $sidebar.find('.sidebar__box');
+  var $sidebar;
+  var $sidebarItem;
+  var $sidebarBox;
 
-  //bind events
+  //binds events
+
+
+  var init = function () {
+    $sidebar = $('.sidebar');
+    if ($sidebar.length > 0) {
+      $sidebarItem = $sidebar.find('.sidebar__item');
+      $sidebarBox = $sidebar.find('.sidebar__box');
+
+      bindEvents();
+    }
+
+  };
+
+  $(document).ready(function () {
+    init();
+
+  });
+
+  var bindEvents = function () {
+    sidebarClick();
+  };
+
 
   var sidebarClick = function () {
 
     $sidebarItem.on('click', function (e) {
       e.cancelBubble = true;
-      $div = $(this).find($sidebarBox);
+      var $div = $(this).find($sidebarBox);
       $div.finish().slideToggle(500);
       $sidebarBox.not($div).hide(500);
       noBubble();
@@ -44,20 +65,5 @@ var side = (function () {
   var hideBox = function () {
     $sidebarBox.hide(500);
   };
-
-
-
-  var init = function () {
-    sidebarClick();
-
-  };
-
-  $(document).ready(function () {
-    init();
-  });
-
-  return {
-    init : init
-  }
 
 })();

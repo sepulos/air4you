@@ -1559,16 +1559,12 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .menu__plus {
-  display: inline-block;
   float: right;
-}
-
-.menu__plus.-main {
   display: none;
 }
 
 @media (max-width: 811px) {
-  .menu__plus.-main {
+  .menu__plus {
     display: inline-block;
   }
 }

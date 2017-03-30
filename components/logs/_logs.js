@@ -1,31 +1,27 @@
 var logs = (function () {
 
   //catche DOM
+  var $logs
   var $logsBox;
   var $item;
   var $area;
 
   //bind events
 
-
   var init = function () {
-    var $logs = $('.logs');
+    $logs = $('.logs');
     if ($logs.length > 0) {
       $logsBox = $logs.find('.logs__box');
       $item = $logs.find('.logs__boxItem');
       $area = $logs.find('.logs__area');
 
-      bindEvents();
+      slicklogs();
     }
   };
 
   $(document).ready(function () {
     init();
   });
-
-  var bindEvents = function () {
-    slicklogs();
-  };
 
   var slicklogs = function () {
     $logsBox.waitForImages(function () {

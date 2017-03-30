@@ -15,7 +15,6 @@
   +PHONE_ONLY_600
     position: relative
 
-
   &__top
     width: 100%
     +clearfix
@@ -194,13 +193,11 @@
     width: 80%
 
   &__plus
-    display: inline-block
     float: right
+    display: none
 
-    &.-main
-      display: none
-      +PHONE_ONLY
-        display: inline-block
+    +PHONE_ONLY
+      display: inline-block
 
   &__bars
     position: absolute

@@ -1,7 +1,7 @@
-var slider = (function () {
+var moreInfo = (function () {
 
   //Catche DOM
-  var $slider;
+  var $moreInfo;
   var $slick;
   var $news;
 
@@ -47,12 +47,12 @@ var slider = (function () {
           {
             breakpoint: 600,
             settings: {
-              dots: false,
               slidesToShow: 1,
-              slidesToScroll: 1
+              slidesToScroll: 1,
             }
           }
-          ]
+        ]
+
       });
     });
 

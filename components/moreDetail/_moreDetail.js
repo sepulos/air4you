@@ -12,18 +12,13 @@ var moreDetail = (function () {
     if ($moreDetail.length > 0) {
       $box = $moreDetail.find('.moreDetail__small');
 
-      bindEvents();
+      lightBox();
     }
   };
 
   $(document).ready(function () {
     init();
   });
-
-  var bindEvents = function () {
-    lightBox();
-  };
-
 
   var lightBox = function () {
     $box.lightGallery({

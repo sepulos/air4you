@@ -8,9 +8,13 @@
     padding: 10px
     text-align: center
     box-sizing: border-box
+    +PHONE_ONLY_600
+      width: 100%
 
     &.-full
       width: 100%
+      +PHONE_ONLY_480
+        padding: 0
 
   &__text
     text-align: left
@@ -23,6 +27,8 @@
 
     &.-center
       text-align: center
+      +PHONE_ONLY_480
+        padding: 30px 0
 
   &__btn
     display: inline-block

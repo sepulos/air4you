@@ -5,18 +5,7 @@
   width: auto
   margin: 10px 5px
   box-sizing: border-box
-  +PHONE_ONLY_600
-    margin: 5px auto
 
-  &:hover
-    .categorItem__contentText
-      background: white
-      transform: rotate(5deg)
-      color: $blue
-      font-weight: 700
-      border: 1px solid $blue
-      +PHONE_ONLY
-        transform: none
 
   &__img
     width: 100%
@@ -40,4 +29,13 @@
     +TAB_MAX
       font-size: 12px
     +PHONE_ONLY
-      font-size: 14px
+      font-size: 12px
+
+    .categorItem:hover &
+      background: white
+      transform: rotate(5deg)
+      color: $blue
+      font-weight: 700
+      border: 1px solid $blue
+      +PHONE_ONLY
+        transform: none

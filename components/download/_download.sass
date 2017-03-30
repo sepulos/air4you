@@ -9,7 +9,7 @@
     box-sizing: border-box
     +TAB_MAX
       width: 50%
-    +PHONE_ONLY
+    +PHONE_ONLY_600
       width: 100%
 
     &:hover
@@ -17,9 +17,15 @@
 
     &.-three
       width: 33.33%
+      +LAPTOP_MAX
+        width: 50%
+      +PHONE_ONLY_600
+        width: 100%
 
     &.-two
       width: 50%
+      +TAB_ONLY_880
+        width: 100%
 
   &__title
     font-size: 18px

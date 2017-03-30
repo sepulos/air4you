@@ -41,7 +41,16 @@ var slider = (function () {
         customPaging: function(slider, i) {
           // this example would render "tabs" with titles
           return '<button class="slider__tab"></button>';
-        }
+        },
+        responsive: [
+          {
+            breakpoint: 600,
+            settings: {
+              dots: false,
+              arrows: false
+            }
+          }
+          ]
       });
     });
 

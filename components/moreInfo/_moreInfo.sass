@@ -10,11 +10,13 @@
     border-bottom: 1px solid gray
     border-top: 1px solid gray
     +clearfix
+    +PHONE_ONLY_600
+      padding: 10px 0 20px
+      font-size: 20px
 
   &__news
-    width: 50%
+    width: 100%
     float: left
-    padding: 30px 0 35px
 
   &__newsBox
     width: 50%
@@ -65,6 +67,7 @@
   &__prev
     position: absolute
     top: 15px
+    padding-top: 8px
     left: 0
     font-size: 30px
     color: white
@@ -72,10 +75,16 @@
     cursor: pointer
     background: #c4c4c4
     +clearfix
-    height: 50px
+    height: 45px
     width: 50px
     +flex
     transition: background 1s
+    +PHONE_ONLY_600
+      font-size: 20px
+      height: 30px
+      width: 30px
+      padding-top: 3px
+      padding-left: 2px
 
     &:hover
       background: gray
@@ -83,6 +92,7 @@
   &__next
     position: absolute
     top: 15px
+    padding-top: 8px
     right: 0
     font-size: 30px
     color: white
@@ -91,10 +101,16 @@
     text-align: center
     background: #c4c4c4
     +clearfix
-    height: 50px
+    height: 45px
     width: 50px
     +flex
     transition: background 1s
+    +PHONE_ONLY_600
+      font-size: 20px
+      height: 30px
+      width: 30px
+      padding-top: 3px
+      padding-left: 2px
 
     &:hover
       background: gray
@@ -105,6 +121,8 @@
     top: -40px
     display: flex
     transform: translateX(-50%)
+    +PHONE_ONLY_600
+      top: -20px
 
   &__tab
     justify-content: center

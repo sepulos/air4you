@@ -11,6 +11,7 @@ var menu = (function () {
   var $level;
   var $level2;
   var $plus;
+  var $close;
 
   //bind events
 
@@ -26,15 +27,25 @@ var menu = (function () {
       $level = $menu.find('.menu__level');
       $level2 = $menu.find('.menu__level2');
       $plus = $menu.find('.menu__plus');
+      $close = $menu.find('.menu__close');
 
       bindEvents();
-      // scroll();
       menuDisplay();
-      subb();
-      subbMenu();
-      subb2();
-      plus();
     }
+  };
+
+  $(document).ready(function () {
+    init();
+  });
+
+
+  var bindEvents = function () {
+    menuClick();
+    subb();
+    subbMenu();
+    subb2();
+    plus();
+    close();
   };
 
   var subbMenu = function () {
@@ -61,25 +72,10 @@ var menu = (function () {
     })
   };
 
-
-
-  $(document).ready(function () {
-    init();
-  });
-
-
-  var bindEvents = function () {
-    menuClick();
-  };
-
   var menuDisplay = function () {
     $( window ).resize(function () {
       menuResize();
     });
-  };
-
-  var scroll = function () {
-    $menu.sticky({topSpacing:0, zIndex:10});
   };
 
   var menuResize = function () {
@@ -105,5 +101,10 @@ var menu = (function () {
     $nav.slideToggle(300);
   };
 
+  var close = function () {
+    $close.on('click', function () {
+      $subMenu.slideToggle(600);
+    });
+  };
 
 })();

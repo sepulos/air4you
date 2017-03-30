@@ -2,6 +2,8 @@
   padding: 15px
   +clearfix
   box-sizing: border-box
+  +PHONE_ONLY_480
+    padding: 0
 
   &__small
     width: 50%
@@ -64,6 +66,9 @@
       height: 40px
       +flex
       background: #f7f7f7
+        
+      &:hover
+        color: $blue
 
   &__pdf
     float: left

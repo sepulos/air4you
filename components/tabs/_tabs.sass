@@ -9,11 +9,17 @@
     &:before
       content: ""
       position: absolute
-      left: 325px
+      left: 320px
       bottom: 0
       height: 1px
-      width: 50%
+      width: 40%
       border-bottom: 1px solid black
+      +LAPTOP_MAX
+        width: 32%
+      +TAB_MAX
+        width: 22%
+      +TAB_ONLY_880
+        display: none
 
   &__item
     background: #006cff
@@ -23,6 +29,8 @@
     cursor: pointer
     border-top: 1px solid transparent
     border-right: 1px solid transparent
+    +PHONE_ONLY_480
+      padding: 10px
 
   &__content
     display: none

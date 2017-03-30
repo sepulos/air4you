@@ -1,7 +1,7 @@
-var gallery = (function () {
+var logs = (function () {
 
   //catche DOM
-  var $galleryBox;
+  var $logsBox;
   var $item;
   var $area;
 
@@ -9,11 +9,11 @@ var gallery = (function () {
 
 
   var init = function () {
-    var $gallery = $('.gallery');
-    if ($gallery.length > 0) {
-      $galleryBox = $gallery.find('.gallery__box');
-      $item = $gallery.find('.gallery__boxItem');
-      $area = $gallery.find('.gallery__area');
+    var $logs = $('.logs');
+    if ($logs.length > 0) {
+      $logsBox = $logs.find('.logs__box');
+      $item = $logs.find('.logs__boxItem');
+      $area = $logs.find('.logs__area');
 
       bindEvents();
     }
@@ -24,12 +24,12 @@ var gallery = (function () {
   });
 
   var bindEvents = function () {
-    slickGallery();
+    slicklogs();
   };
 
-  var slickGallery = function () {
-    $galleryBox.waitForImages(function () {
-      $galleryBox.slick({
+  var slicklogs = function () {
+    $logsBox.waitForImages(function () {
+      $logsBox.slick({
         infinite: true,
         selector: $item,
         dots: false,
@@ -38,9 +38,9 @@ var gallery = (function () {
         slidesToScroll: 1,
         autoplay: true,
         arrows: true,
-        appendArrows: '.gallery__box',
-        prevArrow: '<div class="gallery__prev"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>',
-        nextArrow: '<div class="gallery__next"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>',
+        appendArrows: '.logs__box',
+        prevArrow: '<div class="logs__prev"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>',
+        nextArrow: '<div class="logs__next"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>',
         autoplaySpeed: 2000,
         responsive: [
           {

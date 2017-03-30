@@ -52,7 +52,23 @@ var product = (function () {
         },
         responsive: [
           {
-            breakpoint: 800,
+            breakpoint: 1024,
+            settings: {
+              dots: false,
+              slidesToShow: 3,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 640,
+            settings: {
+              dots: false,
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 480,
             settings: {
               dots: false,
               slidesToShow: 1,
@@ -84,6 +100,14 @@ var product = (function () {
               slidesToShow: 2,
               slidesToScroll: 1
             }
+          },
+          {
+            breakpoint: 400,
+            settings: {
+              dots: false,
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
           }
         ]
       });
@@ -109,6 +133,14 @@ var product = (function () {
             settings: {
               dots: false,
               slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 500,
+            settings: {
+              dots: false,
+              slidesToShow: 1,
               slidesToScroll: 1
             }
           }
